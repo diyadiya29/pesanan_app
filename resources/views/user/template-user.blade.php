@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Append Bootstrap Template</title>
+  <title>Lians Salon</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/user/assets/img/favicon.png" rel="icon">
+  <link href="/user/assets/img/foto.jpg" rel="icon">
   <link href="/user/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -50,11 +50,11 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html#hero" class="">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#about">Situs Kami</a></li>
           <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#pricing">Wedding Organizer</a></li>
+          <li><a href="index.html#team">Pakaian Adat</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>

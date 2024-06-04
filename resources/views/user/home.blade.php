@@ -185,15 +185,18 @@
 
         <div class="row g-4">
           @foreach($wedding as $data)
+          @php
+            $foto = explode(',',$data->foto);
+          @endphp
           <div class="col-lg-4">
             <div class="pricing-item">
               <h3>{{$data->nama_paket}}</h3>
-              <img src="/user/assets/img/wedding/{{$data->foto}}" width="100%" alt="" srcset="">
-              <h5 class="mt-3 text-center fw-bold">{{$data->harga}}<span></span></h5>
+              <img src="/user/assets/img/wedding/{{$foto[0]}}" width="100%" alt="" srcset="">
+              <h5 class="text-center mt-3 fw-bold" data-aos="fade-up" data-aos-delay="200">Rp {{number_format($data->harga,0,',','.')}}<span></span></h5>
               <p class="text-center">
                 {{$data->deskripsi}}
               </p>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+              <div class="text-center"><a href="/paket-wedding/detail/{{$data->id}}" class="buy-btn">Detail</a></div>
             </div>
           </div><!-- End Pricing Item -->
           @endforeach
@@ -212,18 +215,21 @@
       </div><!-- End Section Title -->
 
       <div class="container">
-
         <div class="row gy-5">
         
             @foreach($pakaian_adat as $data)            
+              @php
+              $foto = explode(',',$data->foto);
+            @endphp
                 <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
                     <div class="member-img">
-                    <img src="/user/assets/img/baju-adat/{{$data->foto}}" class="img-fluid" alt="">
+                    <img src="/user/assets/img/baju-adat/{{$foto[0]}}" class="img-fluid" alt="">
                     </div>
                     <div class="member-info text-center">
                     <h4>{{$data->nama_produk}}</h4>
-                    <span>{{$data->harga}}</span>
+                    <span>Rp {{number_format($data->harga,0,',','.')}}</span>
                     <p>{{$data->deskripsi}}</p>
+                    <div class="text-center"><a href="/pakaian_adat/detail/{{$data->id}}" class="buy-btn">Detail</a></div>
                     </div>
                 </div>
             @endforeach
