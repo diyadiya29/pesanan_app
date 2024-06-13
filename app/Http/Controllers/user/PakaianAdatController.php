@@ -25,14 +25,27 @@ class PakaianAdatController extends Controller
             'stok' => $request->stok
         ];
 
+        $filtered_pakaian_adat = array_filter(Session::get('cart'), function($item) use($request) {
+            return $item['id_pakaian_adat'] == $request->id_pakaian_adat;
+        });
+
         $cart = Session::get('cart', []);
 
-        $cart[] = $cartItem;
-        Session::put('cart', $cart);
+        if(count($filtered_pakaian_adat) == 1){
+            $key = array_keys($filtered_pakaian_adat)[0];
+            $cart[$key]['stok'] += $request->stok;
+            Session::put('cart', $cart);
+        }
+        else{
+            $cart[] = $cartItem;
+            Session::put('cart', $cart);
+        }
+
         return redirect('/cart');
     }
 
     function cart(){
+        return Session::get('cart');
         return view("user/cart");
     }
 }
