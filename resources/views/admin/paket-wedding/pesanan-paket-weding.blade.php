@@ -24,9 +24,9 @@
     <section class="content">
       <div class="container-fluid">
         <div class="card card-body">
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <a href="/admin/pesanan-paket-wedding/tambah-pasan-wedding" class="btn btn-primary">+ Tambah Pesanan</a>
-        </div>
+        </div> --}}
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead>

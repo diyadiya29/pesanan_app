@@ -21,16 +21,22 @@ Route::get('/pakaian_adat', [ProdukController::class,"pakaian_adat"]);
 Route::get('/paket_wedding', [WeddingController::class,"paket_wedding"]);
 Route::get('/admin',[AdminController::class,"home"]);
 Route::get('/admin/paket-wedding/data-paket',[AdminPaketWeddingController::class,"DataPaket"]);
+Route::post('/admin/pesan-pakaian-adat/pengembalian-pakaian-adat',[AdminPesanPakaianAdatController::class,"pengembalianPakaianAdat"]);
 Route::get('/admin/pesan-pakaian-adat/data-pakaian-adat',[AdminPesanPakaianAdatController::class,"pesanPakaianAdat"]);
 Route::get('/admin/pesan-pakaian-adat/data-pakaian-adat-pending',[AdminPesanPakaianAdatController::class,"pesanPakaianAdatPending"]);
+Route::get('/admin/pesan-pakaian-adat/delete-data-pakaian-adat-pending/{id}',[AdminPesanPakaianAdatController::class,"deletePesanPakaianAdatPending"]);
+Route::get('/admin/pesan-pakaian-adat/confirm-data-pakaian-adat-pending/{id}',[AdminPesanPakaianAdatController::class,"confirmPesanPakaianAdatPending"]);
 
 Route::get('/admin/pesanana-paket-wedding',[AdminPesananPaketWeddingController::class,"pesanWedding"]);
 Route::get('/admin/pakaian-adat/master-pakaian-adat',[AdminPakaianAdatController::class,"dataPakaianAdat"]);
 
 Route::get('/paket-wedding/detail/{id}',[PaketWeddingController::class,'detail']);
 Route::get('/pakaian_adat/detail/{id}',[PakaianAdatController::class,'detail']);
+Route::post('/store-pesan-wedding',[WeddingController::class,'checkoutWedding']);
+Route::post('/checkout-pakaian-adat',[PakaianAdatController::class,'checkoutPakaianAdat']);
 Route::post('/simpan-cart-pakaian-adat',[PakaianAdatController::class,'simpanCart']);
 Route::get('/cart',[PakaianAdatController::class,'cart']);
+Route::get('/remove-cart/{id}',[PakaianAdatController::class,'removeCart']);
 Route::get('/admin/pesan-pakaian-adat/pesan-detail/{id}',[AdminPesanPakaianAdatController::class,'detail']);
 Route::get('/admin/pakaian-adat/tambah-pakaian-adat',[AdminPakaianAdatController::class,"tambah"]);
 Route::post('/admin/pakaian-adat/simpan-pakaian-adat',[AdminPakaianAdatController::class,"simpan"]);

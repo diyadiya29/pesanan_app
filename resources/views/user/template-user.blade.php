@@ -156,6 +156,7 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script src="/admin-template/plugins/jquery/jquery.js"></script>
   <script src="/user/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/user/assets/vendor/php-email-form/validate.js"></script>
   <script src="/user/assets/vendor/aos/aos.js"></script>
@@ -167,6 +168,7 @@
 
   <!-- Main JS File -->
   <script src="/user/assets/js/main.js"></script>
+  @stack('custom-script')
 
 </body>
 

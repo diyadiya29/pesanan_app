@@ -24,21 +24,28 @@
     <section class="content">
       <div class="container-fluid">
         <div class="card card-body">
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <a href="" class="btn btn-primary">+ Tambah Paket</a>
-        </div>
+        </div> --}}
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif          
+
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>Kode Pendaftarn</th>
-                        <th>Email</th>
                         <th>Nama</th>
                         <th>No Hp</th>
                         <th>Alamat</th>
+                        <th>Tanggal Pinjam</th>
+                        <th>Lama Pinjam</th>
+                        <th>Tanggal Kembali</th>
                         <th>Grand Total</th>
-                        <th>Denda</th>
                         <th>Status</th>
                         <th>Aksi</th>
                     </tr>
@@ -49,9 +56,6 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$data->kode_pendaftaran}}</td>
                             <td>
-                                {{$data->email}}
-                            </td>
-                            <td>
                                 {{$data->nama}}
                             </td>
                             <td>{{$data->no_hp}}</td>
@@ -59,19 +63,25 @@
                                 {{$data->alamat}}
                             </td>
                             <td>
-                                {{$data->grand_total}}
+                                {{$data->tanggal_pinjam}}
                             </td>
                             <td>
-                                {{$data->denda}}
+                                {{$data->lama_pinjam}} Hari
+                            </td>
+                            <td>
+                                {{$data->tanggal_kembali}}
+                            </td>
+                            <td>
+                                {{$data->grand_total}}
                             </td>
                             <td>
                                 {{$data->status}}
                             </td>
             
                             <td>
-                            <a href="/admin/pesan-pakaian-adat/pesan-detail/{{$data->id}}" class="btn btn-success btn-sm">Detail</a>                              
-                                <a href="" class="btn btn-primary btn-sm">Edit</a>
-                                <a href="" class="btn btn-danger btn-sm">Delete</a>
+                              <a href="/admin/pesan-pakaian-adat/confirm-data-pakaian-adat-pending/{{ $data->id }}" class="btn btn-primary btn-sm">Confirm</a>
+                              <a href="/admin/pesan-pakaian-adat/pesan-detail/{{$data->id}}" class="btn btn-success btn-sm">Detail</a>                              
+                              <a href="/admin/pesan-pakaian-adat/delete-data-pakaian-adat-pending/{{ $data->id }}" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
                     @endforeach

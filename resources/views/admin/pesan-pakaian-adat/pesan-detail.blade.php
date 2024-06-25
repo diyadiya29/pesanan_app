@@ -29,19 +29,16 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Id_pesan_pakaian_adat</th>
                         <th>Nama Pakaian Adat</th>
                         <th>Harga</th>
                         <th>Qty</th>
                         <th>Subtotal</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($detail as $data)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$data->id_pesan_pakaian_adat}}</td>
                             <td>
                                 {{$data->masterPakaianAdat->nama_produk}}
                             </td>

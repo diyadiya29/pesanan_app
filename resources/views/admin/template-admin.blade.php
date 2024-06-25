@@ -328,5 +328,6 @@
 <script src="/admin-template/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/admin-template/dist/js/pages/dashboard.js"></script>
+@stack('custom-script')
 </body>
 </html>

@@ -40,7 +40,7 @@
               $isLimit = false;
 
               $minStok = 0;
-              if(count($cart) != 0){
+              if($cart && count($cart) != 0){
                 $id = $data_paket->id;
                 $filtered_pakaian_adat = array_filter($cart, function($item) use($id) {
                     return $item['id_pakaian_adat'] == $id;
@@ -62,7 +62,7 @@
               }
               $limitPaket -= $minStok;
 
-              if(count($cart) != 0){
+              if($cart && count($cart) != 0){
                 $id = $data_paket->id;
                 $filtered_pakaian_adat = array_filter($cart, function($item) use($id) {
                     return $item['id_pakaian_adat'] == $id;
@@ -86,6 +86,7 @@
                 <div class="col-lg-3">
                     <label for=""><b>Pilih Stok</b></label>
                     <input type="hidden" name="id_pakaian_adat" value="{{$data_paket->id}}">
+                    <input type="hidden" name="harga" value="{{$data_paket->harga}}">
                     <input type="hidden" name="foto" value="{{$foto[0]}}">
                     <input type="hidden" name="nama" value="{{$data_paket->nama_produk}}">
                     <select name="stok" id="" class="form-control">
