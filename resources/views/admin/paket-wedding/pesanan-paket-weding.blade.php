@@ -27,6 +27,11 @@
         {{-- <div class="mb-3">
             <a href="/admin/pesanan-paket-wedding/tambah-pasan-wedding" class="btn btn-primary">+ Tambah Pesanan</a>
         </div> --}}
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif                  
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead>
@@ -57,7 +62,7 @@
                            
                             <td>{{$data->alamat}}</td>
                             <td>{{$data->grand_total}}</td>
-                            <td>{{$data->id_paket_Wedding}}
+                            <td>{{$data->paketWedding->nama_paket}}
                             </td>
                             <td>{{$data->tanggal_pesan}}
                             </td>
@@ -65,10 +70,8 @@
                             </td>
                             <td>{{$data->tanggal_selesai}}
                             </td>
-                            
                             <td>
-                                <a href="" class="btn btn-primary btn-sm">Edit</a>
-                                <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                <a href="/admin/delete-pesanan-paket-wedding/{{ $data->id }}" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
                     @endforeach

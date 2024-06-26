@@ -33,4 +33,9 @@ class AdminPesananPaketWeddingController extends Controller
 
         return redirect('/admin/pesanana-paket-wedding');
     }
+
+    function deletePesanan($id){
+        PesanWaketWedding::where('id',$id)->delete();
+        return redirect()->back()->with('success','Berhasil Dihapus');
+    }
 }

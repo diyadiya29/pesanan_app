@@ -20,6 +20,7 @@ Route::get('/kontak', [KontakController::class,"kontak"]);
 Route::get('/pakaian_adat', [ProdukController::class,"pakaian_adat"]);
 Route::get('/paket_wedding', [WeddingController::class,"paket_wedding"]);
 Route::get('/admin',[AdminController::class,"home"]);
+Route::get('/admin/delete-pesanan-paket-wedding/{id}',[AdminPesananPaketWeddingController::class,"deletePesanan"]);
 Route::get('/admin/paket-wedding/data-paket',[AdminPaketWeddingController::class,"DataPaket"]);
 Route::post('/admin/pesan-pakaian-adat/pengembalian-pakaian-adat',[AdminPesanPakaianAdatController::class,"pengembalianPakaianAdat"]);
 Route::get('/admin/pesan-pakaian-adat/data-pakaian-adat',[AdminPesanPakaianAdatController::class,"pesanPakaianAdat"]);
