@@ -10,6 +10,7 @@ use App\Http\Controllers\admin\AdminPakaianAdatController;
 use App\Http\Controllers\admin\AdminPaketWeddingController;
 use App\Http\Controllers\admin\AdminPesananPaketWeddingController;
 use App\Http\Controllers\admin\AdminPesanPakaianAdatController;
+use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\user\PakaianAdatController;
 use App\Http\Controllers\user\PaketWeddingController;
 use App\Models\PesanPakaianAdat;
@@ -51,3 +52,4 @@ Route::put('/admin/paket-wedding/update-paket-wedding/{id}',[AdminPaketWeddingCo
 Route::get('/admin/pakaian-wedding/delete-paket-wedding/{id}',[AdminPaketWeddingController::class,'delete']);
 route::get('/admin/pesanan-waket-wedding/tambah-pasan',[AdminPesananPaketWeddingController::class,"tambah"]);
 route::post('/admin/pesanan-waket-wedding/simpan-pasan-wedding',[AdminPesananPaketWeddingController::class,"simpan"]);
+Route::post('/upload-photo', [PhotoController::class, 'store'])->name('upload.photo');
