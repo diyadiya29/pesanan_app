@@ -9,7 +9,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/user/assets/img/foto.jpg" rel="icon">
+  <link href="/user/assets/img/background.jpg" rel="icon">
   <link href="/user/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -44,12 +44,12 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="/user/assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Append</h1><span>.</span>
+        <h1 class="sitename">Lians Salon</h1><span>.</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero" class="">Home</a></li>
+          <li><a href="/" class="">Home</a></li>
           <li><a href="index.html#about">Situs Kami</a></li>
           <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#portfolio">Portfolio</a></li>
@@ -91,9 +91,9 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Append</span>
+            <span class="sitename">Lians Salon</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Lians Salons adalah penyedia layanan wedding organizer dan pakaian adat yang berlokasi di [lokasi salon]. Kami berdedikasi untuk mewujudkan momen-momen spesial Anda menjadi kenangan yang tak terlupakan. Dengan pengalaman bertahun-tahun di industri pernikahan dan fashion, Lians Salons menawarkan layanan lengkap yang mencakup perencanaan, pengorganisasian, dan penyediaan pakaian adat tradisional yang elegan dan berkualitas tinggi.</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
