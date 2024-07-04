@@ -53,9 +53,7 @@
           <li><a href="index.html#portfolio">Portfolio</a></li>
           <li><a href="index.html#pricing">Wedding Organizer</a></li>
           <li><a href="index.html#team">Pakaian Adat</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

@@ -37,9 +37,7 @@
                 </div>
             </div>
         @endforeach
-
     </div>
-
   </div>
 </section><!-- /Team Section -->
 @endsection
